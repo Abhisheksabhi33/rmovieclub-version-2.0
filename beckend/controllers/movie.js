@@ -496,7 +496,7 @@ exports.getRelatedMovies = async (req, res) => {
 };
 
 exports.getTopRatedMovies = async (req, res) => {
-    const {type = 'Film'} = req.query;
+    const {type = 'Song'} = req.query;
 
   const movies =  await Movie.aggregate(  topRatedMoviesPipeline(type));
 
