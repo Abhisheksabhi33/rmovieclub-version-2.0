@@ -3,6 +3,7 @@
   appearance: none;
 }
 
+
 /*For Firefox*/
 .spin-button-none[type="number"] {
   -moz-appearance: textfield;

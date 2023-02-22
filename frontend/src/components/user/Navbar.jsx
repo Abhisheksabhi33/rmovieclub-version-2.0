@@ -43,13 +43,13 @@ export default function Navbar() {
               {isLoggedIn ? (
                 <button
                   onClick={handleLogout}
-                  className="text-white font-semibold text-lg"
+                  className="text-white font-semibold text-lg bg-blue-500 hover:bg-blue-700 py-1 px-3 rounded"
                 >
-                  Log out
+                  Logout
                 </button>
               ) : (
                 <Link
-                  className="text-white font-semibold text-lg"
+                  className="text-white font-semibold text-lg bg-blue-500  hover:bg-blue-700 hover:dark-subtle py-1 px-3 rounded"
                   to="/auth/signin"
                 >
                   Login

@@ -118,6 +118,7 @@ export default function EmailVerification() {
             <Title>Please enter the OTP to verify your account</Title>
             <p className="text-center dark:text-dark-subtle text-light-subtle">
               OTP has been sent to your email!
+              <i>  Use OTP : 123456 </i>
             </p>
           </div>
 

@@ -6,48 +6,54 @@ import { FaUserNinja } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { useAuth } from "../../hooks";
 
-export default function Navbar() {
+export default function Navbar({ visible = true }) {
   const { handleLogout } = useAuth();
+
+  if (!visible) return null;
+
   return (
-    <nav className="w-48 min-h-screen bg-secondary border-r border-gray-300">
-      <div className="flex flex-col justify-between pl-5 h-screen sticky top-0">
-        <ul>
-          <li className="mb-8">
-            <Link to="/">
-              <img src="./logo.png" alt="logo" className="h-14 p-2" />
-            </Link>
-          </li>
-          <li>
-            <NavItem to="/">
-              <AiOutlineHome />
-              <span>Home</span>
-            </NavItem>
-          </li>
-          <li>
-            <NavItem to="/movies">
-              <BiMoviePlay />
-              <span>Movies</span>
-            </NavItem>
-          </li>
-          <li>
-            <NavItem to="/actors">
-              <FaUserNinja />
-              <span>Actors</span>
-            </NavItem>
-          </li>
-        </ul>
-        <div className="flex flex-col items-start pb-5">
-          <span className="font-semibold text-white text-xl">Admin</span>
-          <button
-            onClick={handleLogout}
-            className="flex items-center text-dark-subtle text-sm hover:text-white transition space-x-1"
-          >
-            <FiLogOut />
-            <span>Log out</span>
-          </button>
+    <>  
+
+      <nav className="w-48 min-h-screen bg-secondary border-r border-gray-300">
+        <div className="flex flex-col justify-between pl-5 h-screen sticky top-0">
+          <ul>
+            <li className="mb-8">
+              <Link to="/">
+                <img src="./logo.png" alt="logo" className="h-14 p-2 mt-7" />
+              </Link>
+            </li>
+            <li>
+              <NavItem to="/">
+                <AiOutlineHome />
+                <span>Home</span>
+              </NavItem>
+            </li>
+            <li>
+              <NavItem to="/movies">
+                <BiMoviePlay />
+                <span>Movies</span>
+              </NavItem>
+            </li>
+            <li>
+              <NavItem to="/actors">
+                <FaUserNinja />
+                <span>Actors</span>
+              </NavItem>
+            </li>
+          </ul>
+          <div className="flex flex-col items-start pb-5">
+            <span className="font-semibold text-white text-xl">Admin</span>
+            <button
+              onClick={handleLogout}
+              className="flex items-center text-dark-subtle text-sm hover:text-white transition space-x-1"
+            >
+              <FiLogOut />
+              <span>Logout</span>
+            </button>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 }
 

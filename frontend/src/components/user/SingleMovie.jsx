@@ -127,7 +127,7 @@ export default function SingleMovie() {
             ))}
           </ListWithLabel>
 
-          <ListWithLabel label="Cast:">
+          <ListWithLabel label="Lead Actor:">
             {cast.map(({ id, profile, leadActor }) => {
               return leadActor ? (
                 <CustomButtonLink
@@ -150,7 +150,7 @@ export default function SingleMovie() {
             />
           </ListWithLabel>
 
-          <ListWithLabel label="Cast:">
+          <ListWithLabel label="Genres:">
             {genres.map((g) => (
               <CustomButtonLink label={g} key={g} clickable={false} />
             ))}
@@ -160,7 +160,7 @@ export default function SingleMovie() {
             <CustomButtonLink label={type} clickable={false} />
           </ListWithLabel>
 
-          <CastProfiles cast={cast} />
+          <CastProfiles cast={cast} onProfileClick={handleProfileClick} />
           <RelatedMovies movieId={movieId} />
         </div>
       </Container>
@@ -202,6 +202,7 @@ const CastProfiles = ({ cast, onProfileClick }) => {
           return (
             <div
               key={id}
+              onClick={() => onProfileClick(profile)}
               className="basis-28 flex flex-col items-center text-center mb-4"
             >
               <img

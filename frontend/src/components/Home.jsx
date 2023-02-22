@@ -5,6 +5,9 @@ import NotVerified from "./user/NotVerified";
 import TopRatedMovies from "./user/TopRatedMovies";
 import TopRatedTVSeries from "./user/TopRatedTVSeries";
 import TopRatedWebSeries from "./user/TopRatedWebSeries";
+import TopRatedSongs from "./user/TopRatedSongs";
+import Footer from "./user/Footer";
+
 
 export default function Home() {
   return (
@@ -15,9 +18,11 @@ export default function Home() {
         <HeroSlideshow />
         {/* Most rated movies */}
         <div className="space-y-3 py-8">
+          <TopRatedSongs/>
           <TopRatedMovies />
           <TopRatedWebSeries />
           <TopRatedTVSeries />
+          <Footer className="text-center text-gray-500 text-sm py-4"/>
         </div>
       </Container>
     </div>

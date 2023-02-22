@@ -27,7 +27,10 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="grid grid-cols-3 gap-5 p-5">
+    <>
+    
+      <div className=" max-w-screen-lg mx-auto display: flex-wrap grid sm:grid-cols-3 grid-cols-1 gap-5 p-5">
+     
       <AppInfoBox
         title="Total Uploads"
         subTitle={appInfo.movieCount.toLocaleString()}
@@ -41,8 +44,12 @@ export default function Dashboard() {
         subTitle={appInfo.userCount.toLocaleString()}
       />
 
-      <LatestUploads />
+      </div>
+
+     <div className=" max-w-screen-lg mx-auto grid grid-cols-2 lg:grid-cols-3 gap-5 p-5 ">
+      <LatestUploads className='sm:flex-wrap' />
       <MostRatedMovies />
     </div>
+    </>
   );
 }

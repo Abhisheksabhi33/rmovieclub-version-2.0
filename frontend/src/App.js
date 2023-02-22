@@ -14,6 +14,7 @@ import SingleMovie from "./components/user/SingleMovie";
 import MovieReviews from "./components/user/MovieReviews";
 import SearchMovies from "./components/user/SearchMovies";
 
+
 export default function App() {
   const { authInfo } = useAuth();
   const isAdmin = authInfo.profile?.role === "admin";

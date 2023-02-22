@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import { createUser } from "../../api/auth";
 import { useAuth, useNotification } from "../../hooks";
 import { isValidEmail } from "../../utils/helper";
@@ -42,13 +41,13 @@ export default function Signup() {
   const { updateNotification } = useNotification();
 
   const handleChange = ({ target }) => {
-    const { value, name } = target;
+    const { name, value } = target;
     setUserInfo({ ...userInfo, [name]: value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { ok, error } = validateUserInfo(userInfo); 
+    const { ok, error } = validateUserInfo(userInfo);
 
     if (!ok) return updateNotification("error", error);
 
@@ -71,8 +70,7 @@ export default function Signup() {
   return (
     <FormContainer>
       <Container>
-        {/* <form onSubmit={handleSubmit} className={commonModalClasses + " w-72"}> */}
-        <form className={commonModalClasses + " w-72"}>
+        <form onSubmit={handleSubmit} className={commonModalClasses + " w-72"}>
           <Title>Sign up</Title>
           <FormInput
             value={name}
@@ -96,10 +94,10 @@ export default function Signup() {
             name="password"
             type="password"
           />
-          {/* <Submit value="Sign up" /> */}
+          <Submit value="Sign up" />
 
           <div className="flex justify-between">
-            <CustomLink to="/auth/forget-password">Forget password</CustomLink>
+            <p to="/auth/forget-password">Forget password</p>
             <CustomLink to="/auth/signin">Sign in</CustomLink>
           </div>
         </form>

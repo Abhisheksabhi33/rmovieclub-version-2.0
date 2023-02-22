@@ -23,7 +23,7 @@ export default function Header({ onAddActorClick, onAddMovieClick }) {
   };
 
   return (
-    <div className="flex items-center justify-between relative p-5">
+    <div className="max-w-screen-lg mx-auto flex items-center justify-between relative p-5">
       <AppSearchForm
         onSubmit={handleSearchSubmit}
         placeholder="Search Movies..."
@@ -34,12 +34,12 @@ export default function Header({ onAddActorClick, onAddMovieClick }) {
           onClick={toggleTheme}
           className="dark:text-white text-light-subtle"
         >
-          <BsFillSunFill size={24} />
+          <BsFillSunFill size={24} className="sm:w-auto sm:text-xs"/>
         </button>
 
         <button
           onClick={() => setShowOptions(true)}
-          className="flex items-center space-x-2 dark:border-dark-subtle border-light-subtle dark:text-dark-subtle text-light-subtle hover:opacity-80 transition font-semibold border-2 rounded text-lg px-3 py-1"
+          className="sm:w-auto w-20 text-xs flex items-center space-x-2 dark:border-dark-subtle border-light-subtle dark:text-dark-subtle text-light-subtle hover:opacity-80 transition font-semibold border-2 rounded text-lg px-3 py-1"
         >
           <span>Create</span>
           <AiOutlinePlus />

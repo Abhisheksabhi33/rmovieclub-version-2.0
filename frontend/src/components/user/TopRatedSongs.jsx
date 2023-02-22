@@ -10,7 +10,7 @@ export default function TopRatedMovies() {
   const { updateNotification } = useNotification();
 
   const fetchMovies = async (signal) => {
-    const { error, movies } = await getTopRatedMovies("Film", signal);
+    const { error, movies } = await getTopRatedMovies("Song", signal);
     if (error) return updateNotification("error", error);
 
     setMovies([...movies]);
@@ -25,5 +25,5 @@ export default function TopRatedMovies() {
     };
   }, []);
 
-  return <MovieList movies={movies} title="Viewers choice (Movies)" />;
+  return <MovieList movies={movies} title="Viewers choice (Trending-Songs)" />;
 }

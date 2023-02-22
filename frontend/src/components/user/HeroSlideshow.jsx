@@ -16,8 +16,8 @@ export default function HeroSlidShow() {
   const [slides, setSlides] = useState([]);
   const [upNext, setUpNext] = useState([]);
   const [visible, setVisible] = useState(true);
-  const slideRef = useRef();
-  const clonedSlideRef = useRef();
+  const slideRef = useRef(null);
+  const clonedSlideRef = useRef(null);
 
   const { updateNotification } = useNotification();
 
@@ -124,7 +124,7 @@ export default function HeroSlidShow() {
   }, [slides.length, visible]);
 
   return (
-    <div className="w-full flex">
+    <div className="w-full md:w-auto flex">
       {/* Slide show section */}
       <div className="md:w-4/5 w-full aspect-video relative overflow-hidden">
         {/* current slide */}
@@ -171,9 +171,12 @@ export default function HeroSlidShow() {
   );
 }
 
-const SlideShowController = ({ onNextClick, onPrevClick }) => {
+// tailwind classnames for small screens button and text 
+// "bg-primary rounded border-2 text-white text-xl p-2 outline-none md:hidden "
+
+ const SlideShowController = ({ onNextClick, onPrevClick }) => {
   const btnClass =
-    "bg-primary rounded border-2 text-white text-xl p-2 outline-none";
+    "bg-primary rounded border-2 text-white text-xs p-2 outline-none sm:text-lg sm:p-1";
   return (
     <div className="absolute top-1/2 -translate-y-1/2 w-full flex items-center justify-between px-2">
       <button onClick={onPrevClick} className={btnClass} type="button">
@@ -200,7 +203,7 @@ const Slide = forwardRef((props, ref) => {
       ) : null}
       {title ? (
         <div className="absolute inset-0 flex flex-col justify-end py-3 bg-gradient-to-t from-white via-transparent dark:from-primary dark:via-transparent">
-          <h1 className="font-semibold text-4xl dark:text-highlight-dark text-highlight">
+          <h1 className="font-semibold md:text-2xl text-sm dark:text-highlight-dark text-highlight">
             {title}
           </h1>
         </div>

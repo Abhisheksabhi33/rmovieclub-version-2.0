@@ -4,6 +4,7 @@ export const typeOptions = [
   { title: "Documentary", value: "Documentary" },
   { title: "TV Series", value: "TV Series" },
   { title: "Web Series", value: "Web Series" },
+  { title: "Song", value: "Song" },
 ];
 
 export const statusOptions = [

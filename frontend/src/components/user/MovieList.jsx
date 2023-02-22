@@ -15,7 +15,7 @@ export default function MovieList({ title, movies = [] }) {
   return (
     <div>
       {title ? (
-        <h1 className="text-2xl dark:text-white text-secondary font-semibold mb-5">
+        <h1 className="text-sm sm:text-xl dark:text-white text-secondary font-semibold mb-5">
           {title}
         </h1>
       ) : null}
