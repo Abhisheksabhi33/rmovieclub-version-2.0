@@ -5,15 +5,15 @@ RmovieClub - A movie rating platform
   The platform also includes a role-based authentication system with admin and normal user roles.
 
 Technologies Used
-    MongoDB: A document-based NoSQL database used for storing data.
-    Express: A minimal and flexible Node.js web application framework used for building the backend API.
-    React: A JavaScript library used for building the frontend user interface.
-    Node.js: A JavaScript runtime used for building the backend API.
-    Cloudinary: A cloud-based image and video management platform used for cloud storage of images and videos.
-    VS Code: A lightweight, cross-platform code editor used as the development tool.
-    Render: A cloud-based platform used for hosting the website.
+    MongoDB:  A document-based NoSQL database used for storing data.
+    Express:  A minimal and flexible Node.js web application framework used for building the backend API.
+    React:  A JavaScript library used for building the frontend user interface.
+    Node.js:  A JavaScript runtime used for building the backend API.
+    Cloudinary:  A cloud-based image and video management platform used for cloud storage of images and videos.
+    VS Code:  A lightweight, cross-platform code editor used as the development tool.
+    Render:   A cloud-based platform used for hosting the website.
 
-Features
+Features 
     Complete backend API with Node.js, Express, MongoDB, and Cloudinary.
     Role-Based Authentication (Admin Normal User).
     User Authentication with Email Verification.
@@ -27,13 +27,13 @@ Features
 ![rmovieHome](https://user-images.githubusercontent.com/87107030/228725278-8bc792a4-e06c-4905-8e13-7453ddb7dfe5.png)
 
 
-Getting Started 
-    To get started with RmovieClub, 
+Getting Started
+   To get started with RmovieClub, 
     you can visit the website at https://rmovieclub.render.com/. 
     Once on the website, you can create an account, log in, and start rating and reviewing movies.
 
-If you wish to run the website locally, 
-  you can clone the GitHub repository at https://github.com/yourusername/rmovieclub. 
+If you wish to run the website locally,
+  you can clone the GitHub repository at https://github.com/Abhisheksabhi33/rmovieclub-version-2.0. 
   Once cloned, navigate to the project directory and run npm install to install the necessary dependencies. 
   Then, run npm start to start the development server.
 
