@@ -4,6 +4,7 @@ RmovieClub - A movie rating platform
   This platform is designed to allow users to rate and review movies, as well as view ratings and reviews from other users.
   The platform also includes a role-based authentication system with admin and normal user roles.
 
+
 Technologies Used
     MongoDB:  A document-based NoSQL database used for storing data.
     Express:  A minimal and flexible Node.js web application framework used for building the backend API.
