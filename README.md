@@ -30,7 +30,7 @@ Features
 
 Getting Started
    To get started with RmovieClub, 
-    you can visit the website at https://rmovieclub.render.com/. 
+    you can visit the website at [https://rmovieclub.render.com/. ](https://rmovie.onrender.com/)
     Once on the website, you can create an account, log in, and start rating and reviewing movies.
 
 If you wish to run the website locally,
